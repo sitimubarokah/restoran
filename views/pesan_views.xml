@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- restoran.pesan tree view -->
+    <record id="restoran_pesan_view_tree" model="ir.ui.view">
+        <field name="name">Pesanan</field>
+        <field name="model">restoran.pesan</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="pelayan"/>
+                <field name="name"/>
+                <field name="no_meja"/>
+                <field name="tanggal"/>
+                <field name="dtlpesanan"/>
+                <field name="total_harga"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- restoran.pesan form view -->
+    <record id="restoran_pesan_view_form" model="ir.ui.view">
+        <field name="name">Pesanan</field>
+        <field name="model">restoran.pesan</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="pelayan"/>
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="no_meja"/>
+                        <field name="tanggal"/>
+                        <field name="dtlpesanan"/>
+                        <field name="total_harga"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- restoran.pesan action window -->
+    <record id="restoran_pesan_action" model="ir.actions.act_window">
+        <field name="name" >Pesanan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">restoran.pesan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="restoran_pesan_menu_act" 
+              name="PESANAN" 
+              parent="restoran_pesan_menu_categ" 
+              action="restoran_pesan_action" 
+              sequence="20"/>
+
+</odoo>

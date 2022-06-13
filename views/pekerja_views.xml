@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <!-- restoran.pekerja tree view -->
+    <record id="restoran_pekerja_view_tree" model="ir.ui.view">
+        <field name="name">Pekerja</field>
+        <field name="model">restoran.pekerja</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="jabatan"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- restoran.pekerja form view -->
+    <record id="restoran_pekerja_view_form" model="ir.ui.view">
+        <field name="name">Pekerja</field>
+        <field name="model">restoran.pekerja</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="jabatan"/>
+                    </group>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="status"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- restoran.pekerja action window -->
+    <record id="restoran_pekerja_action" model="ir.actions.act_window">
+        <field name="name">Pekerja</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">restoran.pekerja</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="restoran_pekerja_menu_act" 
+              name="PEKERJA" 
+              parent="restoran_pekerja_menu_categ" 
+              action="restoran_pekerja_action" 
+              sequence="10"/>
+
+
+
+</odoo>

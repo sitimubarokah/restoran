@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_restoran_makanan,access.restoran.makanan,model_restoran_makanan,,1,1,1,1
+access_restoran_pesan,access.restoran.pesan,model_restoran_pesan,,1,1,1,1
+access_restoran_pelanggan,access.restoran.pelanggan,model_restoran_pelanggan,,1,1,1,1
+access_restoran_pekerja,access.restoran.pekerja,model_restoran_pekerja,,1,1,1,1
+
